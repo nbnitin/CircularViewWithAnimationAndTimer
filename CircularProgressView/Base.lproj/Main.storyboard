@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircularProgressView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bu-Qi-6WD" customClass="CircularView" customModule="CircularProgressView" customModuleProvider="target">
+                                <rect key="frame" x="107" y="353" width="200" height="200"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Foa-Q8-6SI"/>
+                                    <constraint firstAttribute="width" constant="200" id="eQy-np-Kyq"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressClr">
+                                        <color key="value" red="1" green="0.80392156859999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackClr">
+                                        <color key="value" red="0.4549019608" green="0.15686274510000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLM-nB-YjH">
+                                <rect key="frame" x="8" y="805" width="398" height="57"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="BSa-6A-rSY"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="btnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WUs-xr-Mwp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HP9-6d-g70">
+                                <rect key="frame" x="8" y="752" width="114" height="41"/>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.30196078430000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="sjt-KR-fxi"/>
+                                </constraints>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="1" blue="0.55900249841126759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mk0-i4-exi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHl-Lg-FwG">
+                                <rect key="frame" x="150" y="752" width="114" height="41"/>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.30196078430000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="287-R2-nI0"/>
+                                    <constraint firstAttribute="height" constant="41" id="Urn-mF-Gad"/>
+                                </constraints>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="1" green="1" blue="0.55900249841126759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4bt-jy-7Kt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGY-bQ-IBt">
+                                <rect key="frame" x="292" y="752" width="114" height="41"/>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.30196078430000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="2bj-VJ-qNE"/>
+                                </constraints>
+                                <state key="normal" title="Reverse">
+                                    <color key="titleColor" red="1" green="1" blue="0.55900249841126759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reverse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8v6-5c-Wgq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hLM-nB-YjH" firstAttribute="top" secondItem="HP9-6d-g70" secondAttribute="bottom" constant="12" id="4qL-KR-YWC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hLM-nB-YjH" secondAttribute="trailing" constant="8" id="G5d-c4-jnV"/>
+                            <constraint firstItem="gHl-Lg-FwG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GFu-xf-IYe"/>
+                            <constraint firstItem="hLM-nB-YjH" firstAttribute="top" secondItem="gHl-Lg-FwG" secondAttribute="bottom" constant="12" id="Glj-ql-OnW"/>
+                            <constraint firstItem="gHl-Lg-FwG" firstAttribute="leading" secondItem="HP9-6d-g70" secondAttribute="trailing" constant="28" id="LzC-Ws-RbG"/>
+                            <constraint firstItem="9bu-Qi-6WD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LzR-xX-qVy"/>
+                            <constraint firstItem="kGY-bQ-IBt" firstAttribute="leading" secondItem="gHl-Lg-FwG" secondAttribute="trailing" constant="28" id="Q5J-Tb-AKn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kGY-bQ-IBt" secondAttribute="trailing" constant="8" id="Tar-cp-Mth"/>
+                            <constraint firstItem="hLM-nB-YjH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="TlS-5e-nf0"/>
+                            <constraint firstItem="9bu-Qi-6WD" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="b0f-3f-74V"/>
+                            <constraint firstItem="HP9-6d-g70" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ej1-VB-aWG"/>
+                            <constraint firstItem="hLM-nB-YjH" firstAttribute="top" secondItem="kGY-bQ-IBt" secondAttribute="bottom" constant="12" id="mqk-CN-4Iv"/>
+                            <constraint firstItem="hLM-nB-YjH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="rvR-Td-vuV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="9bu-Qi-6WD" id="PES-0V-F51"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="92.410714285714278"/>
+        </scene>
+    </scenes>
+</document>
